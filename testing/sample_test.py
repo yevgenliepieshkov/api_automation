@@ -24,6 +24,8 @@ req_register = requests.post(BASE_URL + "/api/register", {"email": "test@gmail.c
 
 print(json.dumps(req_register.json(), indent=3))
 
+print("test succeded")
+
 ##data = json.load(json.dumps(req_register.json(), indent=3))
 
 ##print(data['token'])
