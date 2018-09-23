@@ -26,7 +26,7 @@ print(json.dumps(req_register.json(), indent=3))
 
 print("test succeded")
 
-print("test succeded 2")
+print("test succeded 2, that's great")
 
 ##data = json.load(json.dumps(req_register.json(), indent=3))
 
