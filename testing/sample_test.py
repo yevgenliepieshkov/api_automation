@@ -1,6 +1,18 @@
 import requests
 import json
+import pymysql as db
 
+db_connect = db.connect(user='root', password='', database='emploees')
+cur = db_connect.cursor(db.cursors.DictCursor)
+
+cur.execute("SELECT * FROM emploees as e WHERE e.id IN (select id from emploees where id=4)")
+
+print(cur.description)
+
+print()
+
+for row in cur:
+    print(row["id"], ": ", row["name"])
 
 BASE_URL = "https://reqres.in"
 
